@@ -1,0 +1,9 @@
+The following command should work to build Multiblend on Linux:
+
+  g++ -msse4.1 -pthread -ffast-math -Ofast -o multiblend multiblend.cpp -lm -lpng -ltiff -ljpeg
+
+Harry van der Wolf suggests the following for Mac:
+
+  [install home brew]
+  brew install jpeg-turbo libjpeg libpng libtiff
+  gcc -I/usr/local/opt/jpeg-turbo/include -L/usr/local/opt/jpeg-turbo/lib -std=c++14 -msse4.1 -pthread -ffast-math -Ofast -o multiblend multiblend.cpp -lm -lpng -ltiff -ljpeg -lstdc++
